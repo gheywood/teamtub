@@ -22,7 +22,7 @@ public class Application extends Controller {
     
     public static void getEvent(String name)
     {
-    	Event getE = Event.find("byName", name);
+    	Event getE = Event.find("name", name);
     	render("Application.index", getE);
     
     }
