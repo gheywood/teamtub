@@ -4,7 +4,8 @@
 
 # Home page
 GET     /                                       Application.index
-GET		/addEvent/{eventName}					Application.addEvent
+GET		/addEvent								Application.addEvent
+GET		/event/{name}							Application.getEvent
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

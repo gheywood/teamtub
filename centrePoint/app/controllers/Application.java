@@ -20,13 +20,21 @@ public class Application extends Controller {
     
     }
     
+    public static void getEvent(String name)
+    {
+    	Event getE = Event.find("byName", name);
+    	render("Application.index", getE);
+    
+    }
+    
     public static void postEvent(
     	String inputTitle,
     	String inputCategory,
     	String inputDescription,
     	String inputStartTime)
     {
-    	//new Event(title, category, description, startTime);	
-    	render();
+    	Event newE = new Event(inputTitle, inputCategory, inputDescription, inputStartTime);
+    	newE.save();	
+    	render("@Application.index");
     }
 }
