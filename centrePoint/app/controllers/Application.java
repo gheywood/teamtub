@@ -13,19 +13,13 @@ public class Application extends Controller {
         render();
     }
     
-    public static void addEvent(String eventName)
+    public static void addEvent()
     {
     	String name = "ewName";
     	render();
     
     }
-    
-    public static void getEvent(String name)
-    {
-    	Event getE = Event.find("name", name);
-    	render("Application.index", getE);
-    
-    }
+
     
     public static void postEvent(
     	String inputTitle,
